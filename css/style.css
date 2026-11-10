@@ -1,0 +1,269 @@
+
+/* Configurações gerais do site */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo da página */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0c012b;
+    color: #fbfcfd;
+}
+
+.cabecalho{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 5%;
+    background-color: #0c012b;
+}
+
+/*Titulo do site*/
+.cabecalho h1{
+    color: #deaeff;
+    font-size: 26px;
+}
+
+/*menu*/
+
+.cabecalho ul{
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+/*Links*/
+.cabecalho a{
+    text-decoration: none;
+    color: #fffeff;
+    font-weight: bold;
+}
+.cabecalho a:hover{
+    color: #9261c0;
+}
+
+
+/* SEÇÃO PRINCIPAL - HERO */
+
+.heroprincipal {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 60px 5%;
+    min-height: 450px;
+    
+}
+
+/* Conteúdo textual */
+
+.heroprincipal-conteudo {
+    flex: 1;
+}
+
+.hero-conteudo h2 {
+    font-size: 38px;
+    color: #233B68;
+    margin-bottom: 20px;
+}
+
+.heroprincipal-conteudo p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+/* Imagem */
+
+.hero-imagem {
+    flex: 1;
+}
+
+.hero-imagem img {
+    width: 100%;
+    max-width: 550px;
+    height: auto;
+    display: block;
+    border-radius: 20px;
+}
+
+/* Botão */
+
+.botao {
+    display: inline-block;
+    background-color: #4078f1;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.botao:hover {
+    background-color: #082e75;
+}
+
+/* SEÇÃO DE FUNCIONALIDADES */
+
+.funcionalidades {
+    padding: 70px 5%;
+    text-align: center;
+    background-color: #0c012b;
+}
+
+.funcionalidades h2 {
+    font-size: 32px;
+    color: #dde8fd;
+    margin-bottom: 15px;
+}
+
+.subtitulo {
+    font-size: 17px;
+    color: #eccff1;
+    margin-bottom: 40px;
+}
+
+/* ORGANIZAÇÃO DOS CARDS */
+
+.container-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+/* APARÊNCIA DOS CARDS */
+
+.card {
+    background-color: #cdb8fc;
+    padding: 30px 20px;
+    border-radius: 25px;
+    box-shadow: 0 4px 12px rgba(35, 59, 104, 0.08);
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+/* ÍCONES */
+
+.icone {
+    font-size: 35px;
+    margin-bottom: 15px;
+}
+
+/* TÍTULOS DOS CARDS */
+
+.card h3 {
+    color: #233B68;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+/* TEXTOS DOS CARDS */
+
+.card p {
+    color: #53647C;
+    line-height: 1.6;
+}
+
+
+/* SEÇÃO DE ALERTA */
+
+.alerta {
+    background-color: #E8EEFA;
+    padding: 40px;
+    margin: 50px 5%;
+    border-left: 6px solid #617ac0;
+    border-radius: 12px;
+}
+
+.alerta h2 {
+    color: #242368;
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+.alerta p {
+    color: #53647C;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.alerta ul {
+    padding-left: 25px;
+}
+
+.alerta li {
+    color: #233B68;
+    margin-bottom: 10px;
+    line-height: 2.0;
+}
+
+
+/* RODAPÉ */
+
+.rodape {
+    background-color: #282368;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 10px;
+}
+
+.rodape h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.rodape p {
+    font-size: 12px;
+    margin-bottom: 9 px;
+    line-height: 1.6;
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    /* Cabeçalho */
+    .cabecalho {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .cabecalho ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    /* Seção principal */
+    .heroprincipal{
+        flex-direction: column;
+        text-align: center;
+        padding: 40px 5%;
+    }
+
+    .heroprincipal-conteudo h2 {
+        font-size: 28px;
+    }
+
+    .hero-imagem img {
+        max-width: 100%;
+    }
+
+    /* Cards */
+    .container-cards {
+        grid-template-columns: 1fr;
+    }
+
+    /* Alerta */
+    .alerta {
+        padding: 25px;
+    }
+}
